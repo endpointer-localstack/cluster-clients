@@ -11,7 +11,7 @@ RESOURCE_TOKEN = 'organizations'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "https://eur-001.endpointer.com"
 
     url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}'
 
@@ -26,8 +26,8 @@ def main():
 
     request_body = {
         
-        'alias':'endpointercluster',
-        'url':'https://docs.endpointer.com/the-hello-world-tutorial/'
+        'alias':'endpointer',
+        'url':'https://endpointer.com'
 
     }
 

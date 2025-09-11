@@ -7,12 +7,13 @@ import requests
 REQUEST_VERB = 'GET'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'organizations'
+RESOURCE_ID = 'tlDRBWve3BaTYP7'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "https://eur-001.endpointer.com"
 
-    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/6UjXsRm4KxbWxVo'
+    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/{RESOURCE_ID}'
 
     session_token = os.environ[ep_session.SESSION_TOKEN_ENV]
 

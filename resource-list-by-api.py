@@ -7,14 +7,15 @@ import requests
 REQUEST_VERB = 'GET'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'resources'
+RESOURCE_ID = 'YlwMzbCKJx3TIeq'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "https://eur-001.endpointer.com"
 
     url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}'
 
-    query_string = 'api-token=aA3cAZxgEnUYIBq'
+    query_string = f'api-token={RESOURCE_ID}'
 
     url = f'{url}?{query_string}'
 

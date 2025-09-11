@@ -10,13 +10,9 @@ RESOURCE_TOKEN = 'organizations'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "httpS://eur-001.endpointer.com"
 
     url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}'
-
-    query_string = 'account-token=YGjIY7zHpsDAhWI'
-
-    url = f'{url}?{query_string}'
 
     session_token = os.environ[ep_session.SESSION_TOKEN_ENV]
 

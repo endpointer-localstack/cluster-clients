@@ -9,7 +9,7 @@ RESOURCE_TOKEN = 'accounts'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "https://eur-001.endpointer.com"
 
     url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}'
 
@@ -21,7 +21,7 @@ def main():
         
         'alias':'robertomessabrasil',
         'url':'https://www.linkedin.com/in/robertomessabrasil',
-        'password':'mRLKmscRCohbdCf'
+        'password':'JVL1CsyGm9fDTFs'
 
     }
 

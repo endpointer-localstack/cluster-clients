@@ -18,7 +18,7 @@ def main():
     body = {
 
         'op': 2,
-        'account-token':'YGjIY7zHpsDAhWI',
+        'account-token':'zTCVzpfCFHgklRk',
         'password':'LU1pBPYRL66dPF6'
 
     }

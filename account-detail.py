@@ -4,12 +4,13 @@ import requests
 REQUEST_VERB = 'GET'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'accounts'
+RESOURCE_ID = 'FLMQRNtCcTvaRGe'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "https://eur-001.endpointer.com"
 
-    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/YGjIY7zHpsDAhWI'
+    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/{RESOURCE_ID}'
 
     headers = {}
 

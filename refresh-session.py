@@ -9,7 +9,7 @@ def main():
 
     load_manager_url = "http://local.load.endpointer.com"
 
-    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/hfSlmF0bvWBOKNN'
+    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/5pH8ERdLccppnz4'
 
     headers = {
         "Content-Type": "application/json"

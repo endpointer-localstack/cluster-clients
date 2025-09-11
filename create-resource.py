@@ -11,7 +11,7 @@ RESOURCE_TOKEN = 'resources'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "https://eur-001.endpointer.com"
 
     url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}'
 
@@ -26,9 +26,9 @@ def main():
 
     request_body = {
     
-        'api-token':'aA3cAZxgEnUYIBq',
-        'alias':'endpointercluster',
-        'url':'https://docs.endpointer.com/the-hello-world-tutorial/'
+        'api-token':'YlwMzbCKJx3TIeq',
+        'alias':'myresource',
+        'url':'myresourceurl'
 
     }
 
