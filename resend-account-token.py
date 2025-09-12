@@ -1,10 +1,10 @@
 import json
 import requests
 
-REQUEST_VERB = 'PATCH'
+REQUEST_VERB = 'GET'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'accounts'
-RESOURCE_ID = '3XXQtRqHRxi78yh'
+RESOURCE_ID = 'robertomessabrasil@gmail.com'
 
 def main():
 
@@ -12,27 +12,17 @@ def main():
 
     url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/{RESOURCE_ID}'
 
-    headers = {
-        "Content-Type": "application/json"
-    }
-
-    body = {
-    
-        'op': 0,
-        'security-token':'g0XSsHaX2WlfmIh'
-
-    }
+    headers = {}
 
     try:
 
         print(f'\n{REQUEST_VERB} {url}')
         
-        response = requests.patch(url, headers=headers, json=body)
+        response = requests.get(url, headers=headers)
         
         sent_headers = response.request.headers
         headers.update(sent_headers)
         print(headers)
-        print(f'{body}\n')
 
         response_status = response.status_code
         
@@ -51,7 +41,6 @@ def main():
         sent_headers = response.request.headers
         headers.update(sent_headers)
         print(headers)
-        print(f'{body}\n')
 
         no_body = (response.status_code == 500)
         if not no_body:

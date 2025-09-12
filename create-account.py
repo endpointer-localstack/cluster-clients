@@ -19,6 +19,7 @@ def main():
 
     request_body = {
         
+        'email':'robertomessabrasil@gmail.com',
         'alias':'robertomessabrasil',
         'url':'https://www.linkedin.com/in/robertomessabrasil',
         'password':'JVL1CsyGm9fDTFs'
@@ -46,7 +47,7 @@ def main():
 
         response.raise_for_status()
         
-        print_response(response)
+        # print_response(response)
 
     except requests.exceptions.RequestException as e:
 

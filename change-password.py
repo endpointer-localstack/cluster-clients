@@ -1,25 +1,26 @@
+import endpointer.http as ep_http
 import json
 import requests
 
 REQUEST_VERB = 'PATCH'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'accounts'
+RESOURCE_ID = '3XXQtRqHRxi78yh'
 
 def main():
 
-    load_manager_url = "http://local.load.endpointer.com"
+    load_manager_url = "https://eur-001.endpointer.com"
 
-    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}'
+    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/{RESOURCE_ID}'
 
-    headers = {
-        "Content-Type": "application/json"
+    request_headers = {
+        ep_http.CONTENT_TYPE: ep_http.APPLICATION_JSON
     }
 
-    body = {
+    request_body = {
 
-        'op': 1,
-        'account-token':'zTCVzpfCFHgklRk',
-        'security-token':'9uNpDTZOFTggEBj',
+        ep_http.PATCH_OP: 1,
+        'security-token':'wcWUK1Ny43Pj9h2',
         'new-password':'LU1pBPYRL66dPF6'
 
     }
@@ -28,12 +29,12 @@ def main():
 
         print(f'\n{REQUEST_VERB} {url}')
         
-        response = requests.patch(url, headers=headers, json=body)
+        response = requests.patch(url, headers=request_headers, json=request_body)
         
         sent_headers = response.request.headers
-        headers.update(sent_headers)
-        print(headers)
-        print(f'{body}\n')
+        request_headers.update(sent_headers)
+        print(request_headers)
+        print(f'{request_body}\n')
 
         response_status = response.status_code
         
@@ -45,14 +46,14 @@ def main():
 
         response.raise_for_status()
         
-        print_response(response)
+        # print_response(response)
 
     except requests.exceptions.RequestException as e:
 
         sent_headers = response.request.headers
-        headers.update(sent_headers)
-        print(headers)
-        print(f'{body}\n')
+        request_headers.update(sent_headers)
+        print(request_headers)
+        print(f'{request_body}\n')
 
         no_body = (response.status_code == 500)
         if not no_body:
