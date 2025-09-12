@@ -26,7 +26,7 @@ def main():
 
     request_body = {
     
-        'api-token':'YlwMzbCKJx3TIeq',
+        'api-token':'aA3cAZxgEnUYIBq',
         'alias':'myresource',
         'url':'myresourceurl'
 
