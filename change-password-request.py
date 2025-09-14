@@ -6,7 +6,7 @@ import requests
 REQUEST_VERB = 'PATCH'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'accounts'
-RESOURCE_ID = 'robertomessabrasil@gmail.com'
+RESOURCE_ID = 'youremailaccount'
 def main():
 
     load_manager_url = "https://eur-001.endpointer.com"
