@@ -1,11 +1,10 @@
-import endpointer.http as ep_http
 import json
 import requests
 
-REQUEST_VERB = 'PATCH'
+REQUEST_VERB = 'GET'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'accounts'
-RESOURCE_ID = 'yTF0Qlpz7bw9OFf'
+RESOURCE_ID = 'robertomessabrasil@gmail.com'
 
 def main():
 
@@ -13,28 +12,17 @@ def main():
 
     url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/{RESOURCE_ID}'
 
-    request_headers = {
-        ep_http.CONTENT_TYPE: ep_http.APPLICATION_JSON
-    }
-
-    request_body = {
-
-        ep_http.PATCH_OP: 1,
-        'security-token':'7VGvoltU4eVASvv',
-        'new-password':'LU1pBPYRL66dPF6'
-
-    }
+    request_headers = {}
 
     try:
 
         print(f'\n{REQUEST_VERB} {url}')
         
-        response = requests.patch(url, headers=request_headers, json=request_body)
+        response = requests.get(url, headers=request_headers)
         
         sent_headers = response.request.headers
         request_headers.update(sent_headers)
         print(request_headers)
-        print(f'{request_body}\n')
 
         response_status = response.status_code
         
@@ -53,7 +41,6 @@ def main():
         sent_headers = response.request.headers
         request_headers.update(sent_headers)
         print(request_headers)
-        print(f'{request_body}\n')
 
         no_body = (response.status_code == 500)
         if not no_body:
