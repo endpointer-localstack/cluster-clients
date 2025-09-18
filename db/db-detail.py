@@ -1,38 +1,35 @@
+import os
+import endpointer.session as ep_session
+
 import json
 import requests
 
-REQUEST_VERB = 'PATCH'
+REQUEST_VERB = 'GET'
 API_TOKEN = 'cluster'
-RESOURCE_TOKEN = 'accounts'
+RESOURCE_TOKEN = 'dbs'
+RESOURCE_ID = 'K7IMehV13K1z7ol'
 
 def main():
 
     load_manager_url = "https://eur-001.endpointer.com"
 
-    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}'
+    url = f'{load_manager_url}/{API_TOKEN}/{RESOURCE_TOKEN}/{RESOURCE_ID}'
+
+    session_token = os.environ[ep_session.SESSION_TOKEN_ENV]
 
     headers = {
-        "Content-Type": "application/json"
-    }
-
-    body = {
-
-        'op': 2,
-        'account-token':'zTCVzpfCFHgklRk',
-        'password':'LU1pBPYRL66dPF6'
-
+        ep_session.SESSION_TOKEN_HEADER:session_token
     }
 
     try:
 
         print(f'\n{REQUEST_VERB} {url}')
         
-        response = requests.patch(url, headers=headers, json=body)
+        response = requests.get(url, headers=headers)
         
         sent_headers = response.request.headers
         headers.update(sent_headers)
         print(headers)
-        print(f'{body}\n')
 
         response_status = response.status_code
         
@@ -51,7 +48,6 @@ def main():
         sent_headers = response.request.headers
         headers.update(sent_headers)
         print(headers)
-        print(f'{body}\n')
 
         no_body = (response.status_code == 500)
         if not no_body:
