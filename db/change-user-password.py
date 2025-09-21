@@ -8,7 +8,7 @@ import requests
 REQUEST_VERB = 'PATCH'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'dbs'
-RESOURCE_ID = 'K7IMehV13K1z7ol'
+RESOURCE_ID = '4H6NG07WssVsyea'
 
 def main():
 
@@ -26,7 +26,7 @@ def main():
     request_body = {
 
         ep_http.PATCH_OP: 1,
-        'new-password':'LU1pBPYRL66dPF6'
+        'new-password':'LU1pBPYRL66dPFa'
 
     }
 

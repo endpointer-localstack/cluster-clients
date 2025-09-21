@@ -26,9 +26,9 @@ def main():
 
     request_body = {
     
-        'organization-token': '6UjXsRm4KxbWxVo',
-        'admin-password': 'UxrFjufoSvOOg8e',
-        'user-password': 'MVYUIjvswo8bHML',
+        'organization-token': 'K4S0WAJZMJgIUI1',
+        'admin-password': 'UxrFjufoSvOOg8a',
+        'user-password': 'MVYUIjvswo8bHMa',
         'alias': 'mydb',
         'url': 'mydburl'
 

@@ -26,7 +26,7 @@ def main():
 
     request_body = {
     
-        'organization-token':'6UjXsRm4KxbWxVo',
+        'organization-token':'K4S0WAJZMJgIUI1',
         'alias':'myapi',
         'url':'myapiurl'
 

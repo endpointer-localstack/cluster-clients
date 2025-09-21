@@ -7,7 +7,7 @@ import requests
 REQUEST_VERB = 'GET'
 API_TOKEN = 'cluster'
 RESOURCE_TOKEN = 'dbs'
-RESOURCE_ID = '6UjXsRm4KxbWxVo'
+RESOURCE_ID = 'K4S0WAJZMJgIUI1'
 
 def main():
 
